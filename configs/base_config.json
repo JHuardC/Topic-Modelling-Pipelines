@@ -1,0 +1,26 @@
+{
+  "paths" : {    "path": "./data/my_data.csv",
+               "model": "./models/model.bin",
+               "labels": "./data/labels.csv",
+               "vectors": "./data/vecs.csv"},
+  "ftc": {"max_topics": "dynamic",
+          "key_words": 10,
+          "topic_selector": 30
+  },
+  "stopwords": ["cat", "dog"],
+  "nmf": {"n_components": 30,
+          "beta_loss": "frobenius",
+          "init": "nndsvd",
+          "max_iter": 1000,
+          "random_state": 42},
+  "lda": {"random_state": 42},
+  "gensim": {"dict":  {"no_below": 3,
+                      "no_above": 0.85,
+                      "keep_n": 5000},
+            "nmf": {"random_state": 42},
+            "lda": {"random_state": 42}
+  },
+  "top_words": {"nouns": 10,
+                "words": 10
+  }
+}

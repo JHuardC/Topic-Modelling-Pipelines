@@ -1,0 +1,9 @@
+/data/*
+/models/*
+/figures/*
+!data_source.txt
+!petitions_sample_test.csv
+*.pyc
+*.__pycache__
+
+*.lnk
