@@ -10,15 +10,14 @@ All the text cleaning functions for data pre-processing.
 
 from typing import Optional, Any, Union
 import re
-import nltk
 from spacy.language import Language
 from spacy.tokens.doc import Doc
 from sklearn.feature_extraction.text import TfidfVectorizer
 import pandas as pd
-from googletrans import Translator
+#from googletrans import Translator
 import pathlib as plib
 
-STOP_WORDS = nltk.corpus.stopwords.words('english')
+
 
 
 ############# Clean all escape characters #############
@@ -167,6 +166,8 @@ def bigram_replacer(top, text):
             text = text.replace(bigram, ' ' + top_split[0] + '_' + top_split[1] + ' ')
     return text
 
+unused = """
+
 TRANSLATOR = Translator()
 
 
@@ -207,3 +208,5 @@ def translate_text(cy_text):
         en_text = cy_text
 
     return en_text
+
+"""
